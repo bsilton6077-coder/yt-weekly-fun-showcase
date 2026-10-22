@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FunTube Weekly</title>
+    <meta
+      name="description"
+      content="A weekly-updated YouTube-style video showcase featuring challenges, gaming, creator clips, and fun community content."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">F</div>
+          <div>
+            <p class="brand-name">FunTube</p>
+            <p class="brand-sub">Weekly Highlights</p>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#trending">Trending</a>
+          <a href="#gaming">Gaming</a>
+          <a href="#challenges">Challenges</a>
+          <a href="#community">Community</a>
+        </nav>
+
+        <button class="action-btn" id="weeklyRefresh">Refresh Weekly</button>
+      </header>
+
+      <main id="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="pill">Updated every week</div>
+            <h1>Big challenge energy, gamer chaos, and creator fun.</h1>
+            <p>
+              Fresh videos packed with MrBeast-style challenges, Karl moments,
+              Unstable SMP Minecraft action, hide-and-seek madness, moon-collecting
+              races, and other wild creator content.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn">Watch this week</button>
+              <button class="secondary-btn">Browse categories</button>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong id="videoCount">36</strong>
+                <span>videos</span>
+              </div>
+              <div>
+                <strong>9</strong>
+                <span>categories</span>
+              </div>
+              <div>
+                <strong>7</strong>
+                <span>new updates</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-thumb">
+              <span class="badge live">Featured</span>
+              <div class="thumb-label">
+                <span class="dot"></span>
+                <strong id="featureTag">Challenge</strong>
+              </div>
+            </div>
+            <div class="feature-info">
+              <p class="eyebrow" id="featureCreator">MrBeast</p>
+              <h2 id="featureTitle">Last to Leave the Lava Arena Wins $500,000</h2>
+              <div class="meta-row">
+                <span id="featureViews">124M views</span>
+                <span id="featureLength">12:45</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cat-strip" aria-label="Categories">
+          <button class="chip active">All</button>
+          <button class="chip">Challenges</button>
+          <button class="chip">Gaming</button>
+          <button class="chip">Minecraft</button>
+          <button class="chip">Manhunts</button>
+          <button class="chip">Hide & Seek</button>
+          <button class="chip">Adventure</button>
+        </section>
+
+        <section class="section-header" id="trending">
+          <div>
+            <p class="eyebrow">Trending now</p>
+            <h3>Most watched this week</h3>
+          </div>
+          <a href="#">See all</a>
+        </section>
+
+        <section class="video-grid" id="videoGrid" aria-live="polite"></section>
+
+        <section class="split-section" id="gaming">
+          <div class="panel">
+            <div class="section-header small-space">
+              <div>
+                <p class="eyebrow">Minecraft madness</p>
+                <h3>Unstable SMP chaos</h3>
+              </div>
+            </div>
+            <ul class="list-rows">
+              <li><span>Survival Overhaul</span><strong>3.2M</strong></li>
+              <li><span>Village betrayal challenge</span><strong>2.8M</strong></li>
+              <li><span>Moon quest speedrun</span><strong>2.1M</strong></li>
+              <li><span>Hidden base locate-and-win</span><strong>1.9M</strong></li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <div class="section-header small-space">
+              <div>
+                <p class="eyebrow">Creator picks</p>
+                <h3>Fan favorites</h3>
+              </div>
+            </div>
+            <ul class="list-rows">
+              <li><span>Karl’s funniest reactions</span><strong>9.8M</strong></li>
+              <li><span>Mario Odyssey challenge run</span><strong>7.4M</strong></li>
+              <li><span>Small ant hide-and-seek</span><strong>5.6M</strong></li>
+              <li><span>Moon collecting sprint</span><strong>4.2M</strong></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section-header" id="challenges">
+          <div>
+            <p class="eyebrow">Weekly drop</p>
+            <h3>Fresh uploads</h3>
+          </div>
+          <a href="#">Refresh feed</a>
+        </section>
+
+        <section class="mini-grid" id="community">
+          <article class="mini-card accent-red">
+            <span class="mini-tag">MrBeast</span>
+            <h4>Last to Leave</h4>
+            <p>Huge challenge stunt with surprise reward rooms.</p>
+          </article>
+          <article class="mini-card accent-gold">
+            <span class="mini-tag">Karl</span>
+            <h4>Wild reactions</h4>
+            <p>Funny, chaotic, and impossible to stop watching.</p>
+          </article>
+          <article class="mini-card accent-cyan">
+            <span class="mini-tag">Minecraft</span>
+            <h4>Unstable SMP</h4>
+            <p>Base building, PvP, and hidden loot races.</p>
+          </article>
+          <article class="mini-card accent-purple">
+            <span class="mini-tag">Challenges</span>
+            <h4>Moon quest</h4>
+            <p>Collecting, sprinting, and survival challenge chaos.</p>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
